@@ -14,10 +14,12 @@ with st.form("Подать заявку"):
 
 if submit:
     data = {"age": age, "income": income, "education": education, "work": work, "car": car}
-    response = requests.post("http://127.0.0.1:8000/score", json=data)
+    response = requests.post("https://credit-scoring-project-26ra.onrender.com/score", json=data)
     if response.json()["approved"]:
         st.success("Поздравляем, ваша заявка одобрена!")
     else:
         st.error("Отказано!")
+
+
 
 
