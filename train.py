@@ -18,6 +18,4 @@ recall = recall_score(y_test, y_pred)
 
 joblib.dump(model, "model.pkl")
 
-print(data.columns.tolist())
-print(data.drop(columns=["default"]).shape)
 
